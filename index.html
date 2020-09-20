@@ -23,7 +23,7 @@
         <div id="box1">
             <div id="inputs">
                 <input type="text" placeholder="Enter your text..." id="data">
-                <div id="msg">Hit enter to generate QR code.</div>
+                <!--<div id="msg">Hit enter to generate QR code.</div>-->
             </div>
 
             <div id="outputbox">
@@ -61,7 +61,7 @@
            qrcode.makeCode(input.value);
        }
 
-       $('#data').on('blur',function(){
+       $('#data').on('keyup',function(){
            makeCode();
        }).on('keydown',function(e){
            if(e.keyCode==13){
